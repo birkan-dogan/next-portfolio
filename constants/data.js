@@ -85,7 +85,8 @@ const userData = {
     currentProjectUrl: "https://react-admin.com",
   },
   certificates: [],
-  resumeUrl: "",
+  resumeUrl:
+    "https://drive.google.com/file/d/1_ouOmDd1deelnlBhYzmVfwA3_UJ1yBPF/view?usp=sharing",
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/birkandogandeveloper/",
     github: "https://github.com/birkan-dogan",
