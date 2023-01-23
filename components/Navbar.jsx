@@ -80,7 +80,7 @@ const Navbar = () => {
             )}
           </Link>
           <Link
-            href="/experience"
+            href="/certificates"
             className={`text-base  ${
               router.asPath === "/experience"
                 ? "text-gray-800 font-bold dark:text-gray-400"
