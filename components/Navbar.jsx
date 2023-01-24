@@ -135,6 +135,7 @@ const Navbar = () => {
           <a
             href={userData.socialLinks.linkedin}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
+            target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -150,6 +151,7 @@ const Navbar = () => {
           <a
             href={userData.socialLinks.github}
             className="text-base font-normal text-gray-600 dark:text-gray-300"
+            target="_blank"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

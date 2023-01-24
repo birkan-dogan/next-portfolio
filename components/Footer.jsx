@@ -6,9 +6,9 @@ export default function Footer() {
     <div className="bg-[#F1F1F1] dark:bg-gray-900">
       <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
         <div className="h-0.5 w-full bg-white dark:bg-gray-700"></div>
-        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-center mt-8">
+        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-end mt-8">
           <div>
-            <p>&copy; Birkan Dogan. All Rights Reserved.</p>
+            <p>&copy; Birkan Dogan.</p>
           </div>
           <div>
             <div>
@@ -17,8 +17,9 @@ export default function Footer() {
                 <a
                   className="hover:bg-red-500 rounded-md px-2 py-1  hover:text-gray-50"
                   href="https://manuarora.in"
+                  target="_blank"
                 >
-                  Manu Arora
+                  Manu Arora. All Rights Reserved.
                 </a>
               </div>
             </div>
@@ -27,6 +28,7 @@ export default function Footer() {
             <a
               href={userData.socialLinks.linkedin}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
+              target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +43,7 @@ export default function Footer() {
             </a>
             <a
               href={userData.socialLinks.github}
+              target="_blank"
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <svg
