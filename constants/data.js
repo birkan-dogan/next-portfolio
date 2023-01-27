@@ -72,6 +72,11 @@ const userData = {
       link: "https://birkan-dogan.github.io/portfolio/index.html",
       imgUrl: "/projectImg/bootstrap.jpg",
     },
+    {
+      title: "Vanilla Movie",
+      link: "https://birkan-dogan.github.io/movie-design/",
+      imgUrl: "/projectImg/movieApp.jpg",
+    },
   ],
   about: {
     title:
