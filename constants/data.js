@@ -80,7 +80,7 @@ const userData = {
     {
       title: "Day1384",
       link: "https://birkan-dogan.github.io/day1384/",
-      imgUrl: "/projectImg/movieApp.jpg",
+      imgUrl: "/projectImg/day1384.png",
     },
   ],
   about: {
