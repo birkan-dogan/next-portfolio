@@ -77,6 +77,11 @@ const userData = {
       link: "https://birkan-dogan.github.io/movie-design/",
       imgUrl: "/projectImg/movieApp.jpg",
     },
+    {
+      title: "Day1384",
+      link: "https://birkan-dogan.github.io/day1384/",
+      imgUrl: "/projectImg/movieApp.jpg",
+    },
   ],
   about: {
     title:
