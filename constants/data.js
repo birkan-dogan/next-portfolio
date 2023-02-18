@@ -53,6 +53,11 @@ const userData = {
       imgUrl: "/projectImg/breakingbad.jpg",
     },
     {
+      title: "Bankist App",
+      link: "https://birkan-dogan.github.io/vanilla-bankist/",
+      imgUrl: "/projectImg/bankistscreen.png",
+    },
+    {
       title: "IOS Calculator",
       link: "https://birkan-dogan.github.io/iosCalculator/",
       imgUrl: "/projectImg/ios.jpg",
@@ -80,7 +85,7 @@ const userData = {
     {
       title: "Day1384",
       link: "https://birkan-dogan.github.io/day1384/",
-      imgUrl: "/projectImg/movieApp.jpg",
+      imgUrl: "/projectImg/day1384.png",
     },
   ],
   about: {
