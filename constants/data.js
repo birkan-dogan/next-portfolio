@@ -87,6 +87,11 @@ const userData = {
       link: "https://birkan-dogan.github.io/day1384/",
       imgUrl: "/projectImg/day1384.png",
     },
+    {
+      title: "Color Of The Time",
+      link: "https://birkan-dogan.github.io/colorOfTheTime/",
+      imgUrl: "./projectImg/colorOfTime.png",
+    },
   ],
   about: {
     title:
