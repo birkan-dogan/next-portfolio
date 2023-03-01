@@ -33,6 +33,11 @@ const userData = {
       imgUrl: "/projectImg/weather-app.jpg",
     },
     {
+      title: "NFT-Site",
+      link: "https://nft-site-coral.vercel.app/",
+      imgUrl: "/projectImg/nft-site.png",
+    },
+    {
       title: "Add Tutorial",
       link: "https://tutorialapp-delta.vercel.app/",
       imgUrl: "/projectImg/tutorial.jpg",
