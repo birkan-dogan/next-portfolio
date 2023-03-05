@@ -8,9 +8,9 @@ const userData = {
   address: "Ankara, Turkey",
   projects: [
     {
-      title: "Fire-Blog App",
-      link: "https://fire-blog-gamma.vercel.app/",
-      imgUrl: "/projectImg/fireblog.jpg",
+      title: "Blog App",
+      link: "https://blogonfire.vercel.app/",
+      imgUrl: "/projectImg/blogApp.png",
     },
     {
       title: "Movie App",
@@ -23,6 +23,11 @@ const userData = {
       imgUrl: "/projectImg/recipe-app.jpg",
     },
     {
+      title: "NFT-Site",
+      link: "https://nft-site-coral.vercel.app/",
+      imgUrl: "/projectImg/nft-site.png",
+    },
+    {
       title: "Fire-Contact",
       link: "https://firecontact-app-tau.vercel.app/",
       imgUrl: "/projectImg/fire-contact.jpg",
@@ -31,11 +36,6 @@ const userData = {
       title: "Weather App",
       link: "https://weather-app-ten-taupe.vercel.app/",
       imgUrl: "/projectImg/weather-app.jpg",
-    },
-    {
-      title: "NFT-Site",
-      link: "https://nft-site-coral.vercel.app/",
-      imgUrl: "/projectImg/nft-site.png",
     },
     {
       title: "Add Tutorial",

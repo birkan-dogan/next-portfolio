@@ -36,18 +36,18 @@ export default function FavouriteProjects() {
         <div className="grid md:grid-cols-3 gap-8 lg:-mt-8 pb-40">
           {/* Single card */}
           <a
-            href="https://fire-blog-gamma.vercel.app/"
+            href="https://blogonfire.vercel.app/"
             className="w-full block col-span-3 shadow-2xl"
             target="_blank"
           >
             <div className="relative overflow-hidden">
               <img
-                src="/projectImg/fireblog.jpg"
+                src="/projectImg/blogApp.png"
                 alt="portfolio"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Fire Blog
+                Blog App
               </h1>
               <h1 className="absolute bottom-10 left-10 text-black-50 font-bold text-xl">
                 01
