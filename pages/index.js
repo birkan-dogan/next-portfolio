@@ -1,19 +1,16 @@
-import Head from "next/head";
-import Image from "next/image";
 import ContainerBlock from "../components/ContainerBlock";
 import FavouriteProjects from "../components/FavouriteProjects";
 import Hero from "../components/Hero";
 import LatestCode from "../components/LatestCode";
 import userData from "../constants/data";
 import getLatestRepos from "../lib/getLatestRepos";
-import styles from "../styles/Home.module.css";
 
 export default function Home({ repositories }) {
   return (
     <div>
       <ContainerBlock
         title="Birkan Dogan - Full-Stack Developer"
-        description="Portfolio site to display full-stack projects"
+        description="Portfolio site to display Birkan Dogan's projects"
       >
         <Hero />
         <FavouriteProjects />
