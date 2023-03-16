@@ -4,8 +4,17 @@ import Hero from "../components/Hero";
 import LatestCode from "../components/LatestCode";
 import userData from "../constants/data";
 import getLatestRepos from "../lib/getLatestRepos";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 export default function Home({ repositories }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div>
       <ContainerBlock

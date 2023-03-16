@@ -40,7 +40,11 @@ export default function FavouriteProjects() {
             className="w-full block col-span-3 shadow-2xl"
             target="_blank"
           >
-            <div className="relative overflow-hidden">
+            <div
+              className="relative overflow-hidden"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <img
                 src="/projectImg/chatApp.png"
                 alt="Birkan Dogan"
@@ -60,7 +64,11 @@ export default function FavouriteProjects() {
             className="w-full block col-span-3 shadow-2xl"
             target="_blank"
           >
-            <div className="relative overflow-hidden">
+            <div
+              className="relative overflow-hidden"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+            >
               <img
                 src="/projectImg/blogApp.png"
                 alt="Birkan Dogan"
@@ -80,7 +88,11 @@ export default function FavouriteProjects() {
             className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
             target="_blank"
           >
-            <div className="relative overflow-hidden">
+            <div
+              className="relative overflow-hidden"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            >
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
                 src="/projectImg/movie-app.jpg"
@@ -101,7 +113,11 @@ export default function FavouriteProjects() {
             className="w-full block col-span-3 sm:col-span-1  object-cover"
             target="_blank"
           >
-            <div className="relative overflow-hidden shadow-2xl">
+            <div
+              className="relative overflow-hidden shadow-2xl"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
                 src="/projectImg/recipe-app.jpg"
