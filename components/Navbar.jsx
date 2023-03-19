@@ -15,14 +15,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
+    <div className="max-w-7xl  mx-auto px-4 py-10 md:py-20">
       <div className="flex  md:flex-row justify-between items-center">
         <div className="flex flex-col">
           <Link href="/">
-            <h1 className="font-semibold text-xl dark:text-gray-100">
+            <h1 className="font-semibold text-xl dark:text-gray-100 px-2">
               {userData.name}
             </h1>
-            <p className="text-base font-light text-gray-500 dark:text-gray-300">
+            <p className="text-base text-gray-500 dark:text-gray-300 hover:bg-red-500 rounded-md px-2 py-1  hover:text-gray-50 transform hover:scale-110 hover:-rotate-3 transition duration-300">
               {userData.designation}
             </p>
           </Link>

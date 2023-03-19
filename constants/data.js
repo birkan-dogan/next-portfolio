@@ -64,9 +64,9 @@ const userData = {
     },
     {
       title: "GitHub API",
-      link: "https://axios-router-project-tau.vercel.app/",
-      imgUrl: "/projectImg/axios-router.jpg",
-      githubUrl: "https://github.com/birkan-dogan/axios-router-project",
+      link: "https://workingongithubapi.vercel.app/",
+      imgUrl: "/projectImg/githubapp.png",
+      githubUrl: "https://github.com/birkan-dogan/workingOnGithubAPI",
     },
     {
       title: "Breaking Bad API",
