@@ -32,3 +32,29 @@ a {
 .github img {
   width: 50px;
 }
+
+.certificates {
+  display: flex;
+  height: 50vh;
+  transition: all 2s;
+}
+
+.certificates .certificate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificates .certificate img {
+  width: 450px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 550px) {
+  .certificates .certificate img {
+    width: 300px;
+    height: 250px;
+    object-fit: contain;
+  }
+}
