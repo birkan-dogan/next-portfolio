@@ -87,6 +87,12 @@ const userData = {
       githubUrl: "https://github.com/birkan-dogan/iosCalculator",
     },
     {
+      title: "Image Editor",
+      link: "https://birkan-dogan.github.io/imageEditor/",
+      imgUrl: "/projectImg/imageEditor.png",
+      githubUrl: "https://github.com/birkan-dogan/imageEditor",
+    },
+    {
       title: "QR Code Generator",
       link: "https://birkan-dogan.github.io/QR-code-Generator/",
       imgUrl: "/projectImg/qrcodegenerator.png",
