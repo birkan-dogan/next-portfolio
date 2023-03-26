@@ -5,6 +5,12 @@ import userData from "../constants/data";
 
 export default function LatestCode({ repositories }) {
   const [repos, setRepos] = useState(repositories);
+  const token = process.env.GITHUB_AUTH_TOKEN;
+
+  useEffect(() => {
+    const repoArr = getLatestRepos(userData);
+    repoArr.length && setRepos(repoArr);
+  }, []);
 
   return (
     <section className="bg-[#F1F1F1] -mt-40 dark:bg-gray-900 pb-40">
@@ -56,7 +62,7 @@ const GithubRepoCard = ({ latestRepo }) => {
         {latestRepo.name}
       </h1>
       <p className="text-base font-normal my-4 text-gray-500">
-        {latestRepo.description}
+        {latestRepo.language}
       </p>
       <a
         href={latestRepo.clone_url}
