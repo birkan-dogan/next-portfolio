@@ -1,7 +1,32 @@
-import React from "react";
 import userData from "../constants/data";
 
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 export default function Contact() {
+  // keys come from .env
+  let serviceKey = process.env.NEXT_PUBLIC_SERVICE_ID;
+  let publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+  let templateKey = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+
+  const ref = useRef();
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm(serviceKey, templateKey, ref.current, publicKey).then(
+      (result) => {
+        console.log(result.text);
+        setSuccess(true);
+      },
+      (error) => {
+        console.log(error.text);
+        setSuccess(false);
+      }
+    );
+  };
+
   return (
     <section>
       <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800 antialiased">
@@ -53,7 +78,11 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <form className="form rounded-lg bg-white p-4 flex flex-col">
+          <form
+            className="form rounded-lg bg-white p-4 flex flex-col"
+            onSubmit={handleSubmit}
+            ref={ref}
+          >
             <label htmlFor="name" className="text-sm text-gray-600 mx-4">
               {" "}
               Your Name
@@ -90,6 +119,8 @@ export default function Contact() {
             >
               Send Message
             </button>
+            {success &&
+              "Your message has been sent. I'll get back to you soon :)"}
           </form>
         </div>
       </div>
