@@ -51,6 +51,10 @@ a {
   height: 300px;
 }
 
+.toggle {
+  transform: scale(1.4);
+}
+
 @media only screen and (max-width: 550px) {
   .certificates .certificate img {
     width: 300px;
