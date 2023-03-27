@@ -4,28 +4,33 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import { useFormik } from "formik";
+import validations from "./yup";
 
 export default function Contact() {
   // working with Formik
-  const { handleSubmit, handleChange, values } = useFormik({
-    initialValues: {
-      name: "",
-      email: "",
-      message: "",
-    },
-    onSubmit: () => {
-      emailjs.sendForm(serviceKey, templateKey, ref.current, publicKey).then(
-        (result) => {
-          console.log(result.text);
-          setSuccess(true);
-        },
-        (error) => {
-          console.log(error.text);
-          setSuccess(false);
-        }
-      );
-    },
-  });
+  const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
+    useFormik({
+      initialValues: {
+        name: "",
+        email: "",
+        message: "",
+      },
+
+      onSubmit: () => {
+        emailjs.sendForm(serviceKey, templateKey, ref.current, publicKey).then(
+          (result) => {
+            console.log(result.text);
+            setSuccess(true);
+          },
+          (error) => {
+            console.log(error.text);
+            setSuccess(false);
+          }
+        );
+      },
+
+      validationSchema: validations,
+    });
 
   // keys come from .env
   let serviceKey = process.env.NEXT_PUBLIC_SERVICE_ID;
@@ -34,21 +39,6 @@ export default function Contact() {
 
   const ref = useRef();
   const [success, setSuccess] = useState(false);
-
-  // const handleSubmit = function (e) {
-  //   e.preventDefault();
-
-  //   emailjs.sendForm(serviceKey, templateKey, ref.current, publicKey).then(
-  //     (result) => {
-  //       console.log(result.text);
-  //       setSuccess(true);
-  //     },
-  //     (error) => {
-  //       console.log(error.text);
-  //       setSuccess(false);
-  //     }
-  //   );
-  // };
 
   return (
     <section>
@@ -116,7 +106,13 @@ export default function Contact() {
               name="name"
               value={values.name}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.name && touched.name && (
+              <div className="py-2 mt-2 px-1 mx-4 text-red-700">
+                {errors.name[0].toUpperCase() + errors.name.slice(1)}
+              </div>
+            )}
             <label htmlFor="email" className="text-sm text-gray-600 mx-4 mt-4">
               Email
             </label>
@@ -126,7 +122,13 @@ export default function Contact() {
               name="email"
               value={values.email}
               onChange={handleChange}
+              onBlur={handleBlur}
             />
+            {errors.email && touched.email && (
+              <div className="py-2 mt-2 px-1 mx-4 text-red-700">
+                {errors.email[0].toUpperCase() + errors.email.slice(1)}
+              </div>
+            )}
             <label
               htmlFor="message"
               className="text-sm text-gray-600 mx-4 mt-4"
@@ -140,16 +142,24 @@ export default function Contact() {
               name="message"
               value={values.message}
               onChange={handleChange}
-              required
+              onBlur={handleBlur}
             ></textarea>
+            {errors.message && touched.message && (
+              <div className="py-2 mt-2 px-1 mx-4 text-red-700">
+                {errors.message[0].toUpperCase() + errors.message.slice(1)}
+              </div>
+            )}
             <button
               type="submit"
               className="bg-blue-500 rounded-md w-1/2 mx-4 mt-8 py-2 text-gray-50 text-xs font-bold"
             >
               Send Message
             </button>
-            {success &&
-              "Your message has been sent. I'll get back to you soon :)"}
+            {success && (
+              <p className="py-2 mt-2 px-1 mx-4 text-lime-600">
+                Your message has been sent. I'll get back to you soon!
+              </p>
+            )}
           </form>
         </div>
       </div>
