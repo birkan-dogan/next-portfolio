@@ -3,7 +3,30 @@ import userData from "../constants/data";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+import { useFormik } from "formik";
+
 export default function Contact() {
+  // working with Formik
+  const { handleSubmit, handleChange, values } = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    onSubmit: () => {
+      emailjs.sendForm(serviceKey, templateKey, ref.current, publicKey).then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+        },
+        (error) => {
+          console.log(error.text);
+          setSuccess(false);
+        }
+      );
+    },
+  });
+
   // keys come from .env
   let serviceKey = process.env.NEXT_PUBLIC_SERVICE_ID;
   let publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
@@ -12,20 +35,20 @@ export default function Contact() {
   const ref = useRef();
   const [success, setSuccess] = useState(false);
 
-  const handleSubmit = function (e) {
-    e.preventDefault();
+  // const handleSubmit = function (e) {
+  //   e.preventDefault();
 
-    emailjs.sendForm(serviceKey, templateKey, ref.current, publicKey).then(
-      (result) => {
-        console.log(result.text);
-        setSuccess(true);
-      },
-      (error) => {
-        console.log(error.text);
-        setSuccess(false);
-      }
-    );
-  };
+  //   emailjs.sendForm(serviceKey, templateKey, ref.current, publicKey).then(
+  //     (result) => {
+  //       console.log(result.text);
+  //       setSuccess(true);
+  //     },
+  //     (error) => {
+  //       console.log(error.text);
+  //       setSuccess(false);
+  //     }
+  //   );
+  // };
 
   return (
     <section>
@@ -91,14 +114,18 @@ export default function Contact() {
               type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="name"
+              value={values.name}
+              onChange={handleChange}
             />
             <label htmlFor="email" className="text-sm text-gray-600 mx-4 mt-4">
               Email
             </label>
             <input
-              type="text"
+              type="email"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
+              value={values.email}
+              onChange={handleChange}
             />
             <label
               htmlFor="message"
@@ -111,6 +138,8 @@ export default function Contact() {
               type="text"
               className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="message"
+              value={values.message}
+              onChange={handleChange}
               required
             ></textarea>
             <button
