@@ -46,16 +46,20 @@ const ProjectCard = ({ title, link, imgUrl, number, githubUrl }) => {
           {number.length === 1 ? "0" + number : number}
         </h1>
       </a>
-      <a
-        href={githubUrl}
-        target="_blank"
-        className="absolute flex justify-center items-center flex-col github"
+      <div
+        className="flex justify-center items-center flex-col absolute github"
         data-aos="fade-left"
         data-aos-duration="2000"
       >
-        <img src="github-logo.svg" alt="Birkan Dogan" />
-        <p className="text-black">Let's go to the repository</p>
-      </a>
+        <a
+          href={githubUrl}
+          target="_blank"
+          className="flex justify-center items-center flex-col"
+        >
+          <img src="github-logo.svg" alt="Birkan Dogan" />
+          <p className="text-black">Let's go to the repository</p>
+        </a>
+      </div>
     </div>
   );
 };
