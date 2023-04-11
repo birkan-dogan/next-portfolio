@@ -20,6 +20,12 @@ const userData = {
       githubUrl: "https://github.com/birkan-dogan/fire-blog",
     },
     {
+      title: "Admin Dashboard",
+      link: "https://business-dashboard-project.vercel.app/",
+      imgUrl: "/projectImg/dashboard.png",
+      githubUrl: "https://github.com/birkan-dogan/react-admin-dashboard",
+    },
+    {
       title: "Movie App",
       link: "https://movie-app-liart-eta.vercel.app/",
       imgUrl: "/projectImg/movie-app.jpg",
@@ -144,7 +150,7 @@ const userData = {
       `But now, I'm a legend. I've been coding in React, Bootstrap, Tailwind, Python, Django PostgreSQL programming language etc to name a few.`,
     ],
     currentProject: "React Admin Dashboard",
-    currentProjectUrl: "https://react-admin.com",
+    currentProjectUrl: "https://business-dashboard-project.vercel.app/",
   },
   certificates: [],
   resumeUrl:
