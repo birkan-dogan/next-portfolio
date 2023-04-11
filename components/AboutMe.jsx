@@ -109,102 +109,13 @@ const AboutMe = () => {
               Tech Stack
             </h1>
             <div className="flex flex-row flex-wrap mt-8">
-              <img
-                src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF81GfHgCqjgn_uOxRDLyxpMcMMqxld6afpnrjZARUqK_NMTD8KLOdIknyYrKLhUnMLwY&usqp=CAU"
-                className="h-20 w-20 mx-4 my-4 rounded-full"
-              />
-              <img
-                src="https://mui.com/static/logo.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/8297/8297437.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/python/python-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg"
-                className="h-20 w-20 mx-4 my-4 p-2 dark:bg-white rounded-3xl"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://miro.medium.com/max/700/1*MQ-Lf8tmtfa-pumN2Sh0cw.png"
-                className="h-20 w-20 mx-4 my-4 rounded-3xl"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/linux/linux-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/github/github-icon.svg"
-                className="h-20 w-20 mx-4 my-4 dark:bg-white rounded-3xl"
-              />
-              <img
-                src="https://camo.githubusercontent.com/add2c9721e333f0043ac938f3dadbc26a282776e01b95b308fcaba5afaf74ae3/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313538383830353835382f7265706f7369746f726965732f76657263656c2f6c6f676f2e706e67"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://www.vectorlogo.zone/logos/npmjs/npmjs-ar21.svg"
-                className="h-20 w-20 mx-4 my-4"
-              />
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/2649/2649708.png"
-                className="h-20 w-20 mx-4 my-4"
-              />
+              {userData.tech.map((item) => (
+                <img
+                  key={item.id}
+                  src={item.src}
+                  className={item.class || "h-20 w-20 mx-4 my-4"}
+                />
+              ))}
             </div>
           </div>
         </div>
