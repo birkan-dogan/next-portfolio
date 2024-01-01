@@ -84,7 +84,7 @@ export default function FavouriteProjects() {
           </a>
           {/* Single card */}
           <a
-            href="https://movie-app-liart-eta.vercel.app/"
+            href="https://business-dashboard-project.vercel.app/"
             className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
             target="_blank"
           >
@@ -95,12 +95,12 @@ export default function FavouriteProjects() {
             >
               {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
               <img
-                src="/projectImg/movie-app.jpg"
+                src="/projectImg/dashboard.png"
                 alt="Birkan Dogan"
                 className="transform hover:scale-125 transition duration-2000 ease-out"
               />
               <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-xl bg-red-500 rounded-md px-2">
-                Movie App
+                Admin Dashboard
               </h1>
               <h1 className="absolute bottom-10 left-10 text-black font-bold text-xl">
                 03
