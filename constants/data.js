@@ -26,6 +26,12 @@ const userData = {
       githubUrl: "https://github.com/birkan-dogan/react-admin-dashboard",
     },
     {
+      title: "LinSoft",
+      link: "https://linsoft.vercel.app/",
+      imgUrl: "/projectImg/linsoft.png",
+      githubUrl: "https://github.com/birkan-dogan/landingPage",
+    },
+    {
       title: "Movie App",
       link: "https://movie-app-liart-eta.vercel.app/",
       imgUrl: "/projectImg/movie-app.jpg",
