@@ -102,7 +102,7 @@ export default function Contact() {
             </label>
             <input
               type="text"
-              className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
+              className="font-light bg-gray-200 rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="name"
               value={values.name}
               onChange={handleChange}
@@ -118,7 +118,7 @@ export default function Contact() {
             </label>
             <input
               type="email"
-              className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
+              className="font-light bg-gray-200 rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="email"
               value={values.email}
               onChange={handleChange}
@@ -138,7 +138,7 @@ export default function Contact() {
             <textarea
               rows="4"
               type="text"
-              className="font-light rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
+              className="font-light bg-gray-200 rounded-md border focus:outline-none py-2 mt-2 px-1 mx-4 focus:ring-2 focus:border-none ring-blue-500"
               name="message"
               value={values.message}
               onChange={handleChange}

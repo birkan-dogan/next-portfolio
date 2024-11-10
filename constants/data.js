@@ -2,7 +2,7 @@ const userData = {
   githubUsername: "birkan-dogan",
   name: "Birkan Dogan",
   designation: "Full-Stack Developer",
-  avatarUrl: "/avatar.png",
+  avatarUrl: "/newPic.png",
   email: "b.561birkan@gmail.com",
   phone: "+90 546 850 3938",
   address: "Ankara, Turkey",
@@ -24,6 +24,12 @@ const userData = {
       link: "https://business-dashboard-project.vercel.app/",
       imgUrl: "/projectImg/dashboard.png",
       githubUrl: "https://github.com/birkan-dogan/react-admin-dashboard",
+    },
+    {
+      title: "Kubbella",
+      link: "https://kubbella.vercel.app/",
+      imgUrl: "/projectImg/kubbella.png",
+      githubUrl: "https://github.com/birkan-dogan/kubbella",
     },
     {
       title: "LinSoft",
@@ -197,13 +203,18 @@ const userData = {
       class: "h-20 w-20 mx-4 my-4 rounded-full",
     },
     {
-      id: 11,
-      src: "https://mui.com/static/logo.png",
-    },
-    {
       id: 12,
       src: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg",
     },
+    {
+      id: 26,
+      src: "https://cdn-icons-png.flaticon.com/128/919/919825.png",
+    },
+    {
+      id: 27,
+      src: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png",
+    },
+
     {
       id: 13,
       src: "https://cdn-icons-png.flaticon.com/512/8297/8297437.png",
@@ -232,7 +243,7 @@ const userData = {
     },
     {
       id: 19,
-      src: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZYtHv2OLXmthRPbkmENZRXuqBVDwlsrZ1A&s",
     },
     {
       id: 20,
@@ -248,16 +259,47 @@ const userData = {
       class: "h-20 w-20 mx-4 my-4 dark:bg-white rounded-3xl",
     },
     {
-      id: 23,
-      src: "https://camo.githubusercontent.com/add2c9721e333f0043ac938f3dadbc26a282776e01b95b308fcaba5afaf74ae3/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313538383830353835382f7265706f7369746f726965732f76657263656c2f6c6f676f2e706e67",
-    },
-    {
       id: 24,
       src: "https://www.vectorlogo.zone/logos/npmjs/npmjs-ar21.svg",
     },
     {
       id: 25,
       src: "https://cdn-icons-png.flaticon.com/512/3967/3967189.png",
+    },
+  ],
+  mostUsedTech: [
+    {
+      id: 6,
+      src: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
+    },
+    {
+      id: 7,
+      src: "https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg",
+    },
+    {
+      id: 8,
+      src: "https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg",
+    },
+    {
+      id: 10,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF81GfHgCqjgn_uOxRDLyxpMcMMqxld6afpnrjZARUqK_NMTD8KLOdIknyYrKLhUnMLwY&usqp=CAU",
+      class: "h-20 w-20 mx-4 my-4 rounded-full",
+    },
+    {
+      id: 5,
+      src: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+    },
+    {
+      id: 26,
+      src: "https://cdn-icons-png.flaticon.com/128/919/919825.png",
+    },
+    {
+      id: 27,
+      src: "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png",
+    },
+    {
+      id: 19,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2ZYtHv2OLXmthRPbkmENZRXuqBVDwlsrZ1A&s",
     },
   ],
   certificates: [],
