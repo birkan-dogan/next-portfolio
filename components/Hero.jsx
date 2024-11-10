@@ -1,8 +1,7 @@
 import React from "react";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
-import userData from "../constants/data";
-import styles from "../styles/Home.module.css";
+import AtomBubbles from "./AtomBubbles";
 
 export default function Hero() {
   const colors = ["#F59E0B", "#84CC16", "#10B981", "#3B82F6"];
@@ -35,13 +34,7 @@ export default function Hero() {
         </RoughNotationGroup>
       </div>
       <div className="hidden lg:flex w-full md:w-1/2 justify-end">
-        <div className="w-1/2">
-          <img
-            src={userData.avatarUrl}
-            alt="avatar"
-            className={styles.shadow}
-          />
-        </div>
+        <AtomBubbles />
       </div>
     </div>
   );
