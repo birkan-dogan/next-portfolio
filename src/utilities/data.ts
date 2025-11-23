@@ -1,4 +1,5 @@
 export interface ProjectItem {
+  id: string;
   title: string;
   description: string;
   image: string;
@@ -14,35 +15,53 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
-    title: "Finance Dashboard",
+    id: "1",
+    title: "Falcone Dashboard",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization.",
+      "Modern Business Management Platform with Real-Time Analytics & Project Tracking.",
     longDescription:
-      "Finance Dashboard is a comprehensive financial analytics platform designed for businesses and individuals to track, analyze, and visualize their financial data in real-time. The application provides intuitive dashboards, interactive charts, and detailed reports that help users make data-driven financial decisions.\n\nUsing modern web technologies, the platform offers a seamless user experience with responsive design and real-time updates. The dashboard includes expense tracking, income management, budget planning, investment monitoring, and financial goal setting features.",
+      "Falcon Dashboard is a feature-rich management platform designed for software development companies and modern businesses. Built with Next.js 15, TypeScript, and shadcn/ui, it consolidates essential functions like project tracking, task management, team collaboration, calendar planning, and comprehensive reporting under one roof.\n\nThe platform features an intuitive interface with multiple view modes, real-time progress tracking, budget management, and advanced filtering capabilities. Its fully responsive design with built-in dark mode ensures seamless accessibility across all devices. The dashboard leverages FullCalendar for professional calendar management and includes dynamic component systems for maximum flexibility and customization.",
     features: [
-      "Real-time financial data visualization",
-      "Interactive charts and graphs",
-      "Expense categorization and tracking",
-      "Budget planning and monitoring",
-      "Financial report generation",
-      "Data export capabilities",
-      "Mobile-responsive design",
+      "Real-time project tracking with progress visualization",
+      "Advanced calendar management with FullCalendar integration",
+      "Comprehensive project details with timeline tracking",
+      "Team collaboration with comments and file management",
+      "Budget tracking and financial analytics",
+      "Task management with status indicators",
+      "Multiple view modes (Grid, List, Calendar)",
+      "Dynamic filtering and search capabilities",
+      "Event management with multiple types (Meeting, Call, Event, Reminder)",
+      "Priority and status-based project organization",
+      "Technology stack visualization for projects",
+      "Dark mode support with modern UI components",
+      "Fully responsive mobile-first design",
+      "TypeScript for type-safe development",
     ],
     challenges:
-      "One of the main challenges was implementing real-time data updates while maintaining optimal performance. We solved this by using WebSockets for critical updates and implementing efficient data caching strategies. Another challenge was creating intuitive data visualizations that could convey complex financial information clearly to users with varying levels of financial literacy.",
-    image:
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800",
+      "One of the main challenges was integrating FullCalendar with Next.js App Router and ensuring proper server-side rendering compatibility. We solved this by implementing client-side components with dynamic imports and proper TypeScript type definitions. Another challenge was creating a flexible component architecture that could handle dynamic Lucide icons without requiring manual imports for each icon. We addressed this by implementing a dynamic icon mapping system that leverages TypeScript's type safety while allowing runtime icon selection. Additionally, we optimized the project detail page's performance by implementing efficient data fetching strategies and skeleton loading states to enhance user experience during data loads.",
+    image: "/falcone/falcone1.png",
     images: [
-      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800",
+      "/falcone/falcone1.png",
+      "/falcone/falcone2.png",
+      "/falcone/falcone3.png",
     ],
-    tech: ["React", "TypeScript", "Chart.js", "TailwindCSS"],
-    github: "https://github.com",
-    live: "https://example.com",
-    slug: "finance-dashboard",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Lucide React",
+      "date-fns",
+      "React Hooks",
+    ],
+    github: "https://github.com/birkan-dogan/",
+    live: "https://falcon-software-dashboard.vercel.app/",
+    slug: "falcon-dashboard",
   },
   {
+    id: "2",
     title: "E-commerce Platform",
     description:
       "Modern shopping experience with advanced filtering and payment processing.",
@@ -72,6 +91,7 @@ export const projectsData: ProjectItem[] = [
     slug: "ecommerce-platform",
   },
   {
+    id: "3",
     title: "Task Management App",
     description:
       "Collaborative project management tool with drag-and-drop functionality.",

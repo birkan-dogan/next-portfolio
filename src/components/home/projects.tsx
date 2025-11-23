@@ -7,43 +7,8 @@ import Link from "next/link";
 import { Github, ExternalLink, Code } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
-// Project data
-const projects = [
-  {
-    id: "ecommerce-platform",
-    title: "E-Commerce Platform",
-    description:
-      "A modern e-commerce platform with cart functionality, user authentication, and payment processing.",
-    image:
-      "https://images.unsplash.com/photo-1746311372686-e164b0bcb333?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    id: "task-management",
-    title: "Task Management App",
-    description:
-      "A collaborative task management application with real-time updates and team functionality.",
-    image:
-      "https://images.unsplash.com/photo-1746311372686-e164b0bcb333?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["React", "Firebase", "Tailwind CSS", "Redux"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    id: "portfolio-website",
-    title: "Portfolio Website",
-    description:
-      "A customizable portfolio template for developers to showcase their work and skills.",
-    image:
-      "https://images.unsplash.com/photo-1746311372686-e164b0bcb333?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-];
+import { ProjectItem, projectsData } from "@/utilities/data";
+import { useRouter } from "next/navigation";
 
 export default function Projects() {
   const ref = useRef(null);
@@ -72,7 +37,7 @@ export default function Projects() {
 
           {/* Projects Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project, index) => (
+            {projectsData.slice(0, 3).map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -100,17 +65,9 @@ export default function Projects() {
   );
 }
 
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  github?: string;
-  live?: string;
-}
+function ProjectCard({ project }: { project: ProjectItem }) {
+  const router = useRouter();
 
-function ProjectCard({ project }: { project: Project }) {
   return (
     <motion.div
       className="group relative overflow-hidden rounded-xl border bg-background shadow-md transition-all h-full"
@@ -136,7 +93,7 @@ function ProjectCard({ project }: { project: Project }) {
 
         {/* Floating badge */}
         <div className="absolute top-4 right-4 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium z-20 border">
-          {project.tags[0]}
+          {project.tech[0]}
         </div>
       </div>
 
@@ -145,8 +102,11 @@ function ProjectCard({ project }: { project: Project }) {
         <div className="flex items-start justify-between">
           <h3 className="text-xl font-bold">{project.title}</h3>
           <motion.div
-            className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center"
+            className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center cursor-pointer"
             whileHover={{ rotate: 360 }}
+            onClick={() => {
+              router.push(`/projects/${project.slug}`);
+            }}
           >
             <ExternalLink className="h-4 w-4" />
           </motion.div>
@@ -155,7 +115,7 @@ function ProjectCard({ project }: { project: Project }) {
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
-          {project.tags.slice(1).map((tag) => (
+          {project.tech.slice(1).map((tag) => (
             <Badge
               key={tag}
               variant="outline"
