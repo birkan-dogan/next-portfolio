@@ -100,7 +100,14 @@ function ProjectCard({ project }: { project: ProjectItem }) {
       {/* Project Content */}
       <div className="p-6 space-y-4 relative z-10">
         <div className="flex items-start justify-between">
-          <h3 className="text-xl font-bold">{project.title}</h3>
+          <h3
+            className="text-xl font-bold cursor-pointer hover:underline underline-offset-4"
+            onClick={() => {
+              router.push(`/projects/${project.slug}`);
+            }}
+          >
+            {project.title}
+          </h3>
           <motion.div
             className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center cursor-pointer"
             whileHover={{ rotate: 360 }}
