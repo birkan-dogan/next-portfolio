@@ -25,7 +25,7 @@ export default function Footer() {
     },
     {
       icon: <Mail className="h-5 w-5" />,
-      href: "mailto:birkandogandev@gmail.com",
+      href: "mailto:b.561birkan@gmail.com",
       label: "Email",
     },
   ];
@@ -33,6 +33,7 @@ export default function Footer() {
   const footerLinks = [
     { label: "Home", href: "/" },
     { label: "Projects", href: "/projects" },
+    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 

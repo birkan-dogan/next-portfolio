@@ -133,3 +133,159 @@ export const projectsData: ProjectItem[] = [
     slug: "jwt-auth-manager",
   },
 ];
+
+export const summary =
+  "Having +5 years experience in IT and 4 years experienced in full-stack development, interested in writing codes, implementing responsive user interfaces, possessing strong creative thinking skills, high energy and integrity. Quickly grasp new technologies and concepts to develop solutions to problems. Especially interested in full-stack development, JavaScript, TypeScript, React.js, Next.js, Node.js, Express.js and MongoDB. Dedicated to staying current with the latest technologies and best practices in the field.";
+
+export const technicalSkills = [
+  "JavaScript",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "TailwindCSS",
+  "Redux",
+  "ContextAPI",
+  "Firebase",
+  "AWS",
+  "Python",
+  "Django",
+  "DRF",
+  "PostgreSQL",
+  "SQLite",
+  "Git & GitHub",
+  "RESTful APIs",
+];
+
+export const softSkills = [
+  "Analytical Thinking",
+  "Problem-Solving",
+  "Self-Motivated",
+  "Strong Communication",
+  "Time Management",
+  "Continuous Learning",
+  "Collaboration & Teamwork",
+  "Curiosity",
+  "Emotional Intelligence",
+];
+
+export const experiences = [
+  {
+    company: "Arasta International Trade Company",
+    role: "Full-Stack Developer",
+    period: "04 2023 - Present",
+    description:
+      "Developed web applications to enhance operational efficiency by managing inventory for store warehouses, and overseeing order management with adjustable dispatch points. Implemented predefined algorithms for product shipments to stores. Integrated AWS S3 for backend storage and marketplace APIs for product loading, updating, and inventory tracking.",
+    highlights: [
+      "Web application development for inventory management",
+      "AWS S3 integration for photo management",
+      "Marketplace API integrations",
+      "Real-time stock updates automation",
+    ],
+  },
+  {
+    company: "Tischkönig Türkiye",
+    role: "Frontend Developer",
+    period: "08 2022 - 10 2022",
+    description:
+      "Enhanced user experience on an e-commerce website operating on the Magento platform through the implementation of frontend technologies.",
+    highlights: [
+      "E-commerce platform development",
+      "Magento platform customization",
+      "Frontend optimization",
+    ],
+  },
+];
+
+export const projects = [
+  {
+    name: "Arasta Management Dashboard",
+    description:
+      "A comprehensive web application for operational efficiency, inventory management, order management, and analytics with AWS S3 integration and Replicate AI API.",
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "TailwindCSS",
+      "JWT",
+      "Recharts",
+      "Express.js",
+      "MongoDB",
+      "AWS",
+      "ExcelJS",
+    ],
+    features: [
+      "Inventory management for store warehouses",
+      "Order management with dispatch points",
+      "Sales reports and analytics",
+      "Product photo management with AI scaling",
+      "Excel export functionality",
+    ],
+    url: "",
+  },
+  {
+    name: "Voigate",
+    description:
+      "A personalized AI-driven voice assistant and marketing tool integrating ElevenLabs, OpenAI, and Google Maps APIs.",
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "TailwindCSS",
+      "JWT",
+      "Express.js",
+      "MongoDB",
+      "OpenAI API",
+      "ElevenLabs API",
+    ],
+    features: [
+      "AI voice interaction",
+      "Marketing automation",
+      "Multi-API integration",
+      "User engagement optimization",
+    ],
+    url: "",
+  },
+  {
+    name: "Arasta Marketplace Integrations",
+    description:
+      "Automated marketplace integration system with real-time stock synchronization across multiple platforms.",
+    tech: [
+      "JavaScript",
+      "Next.js",
+      "TailwindCSS",
+      "Firebase",
+      "Express.js",
+      "MongoDB",
+    ],
+    features: [
+      "Centralized product management",
+      "Multi-marketplace API integration",
+      "Real-time inventory sync",
+      "Automated stock management",
+    ],
+    url: "",
+  },
+  {
+    name: "Falcone Software",
+    description:
+      "User-friendly CRM platform with Shadcn UI components for project management, messaging, and team collaboration.",
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "TailwindCSS",
+      "JWT",
+      "Recharts",
+      "Express.js",
+      "MongoDB",
+      "Shadcn UI",
+    ],
+    features: [
+      "Project management",
+      "Team collaboration tools",
+      "Messaging system",
+      "Business workflow management",
+    ],
+    url: "https://falcon-software-dashboard.vercel.app/",
+  },
+];
